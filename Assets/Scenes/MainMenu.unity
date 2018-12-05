@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480.00006, y: -342.38818}
-  m_SizeDelta: {x: 610.0001, y: 198.21812}
+  m_AnchoredPosition: {x: 479.99994, y: -340.94543}
+  m_SizeDelta: {x: 609.9999, y: 209.86795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163642050
 MonoBehaviour:
@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 220423930}
   - component: {fileID: 220423929}
   - component: {fileID: 220423931}
+  - component: {fileID: 220423932}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -524,6 +525,19 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!114 &220423932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 220423927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918e8e4e3c75f4949bd3220fdebb17b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 597453510}
+  selectedObject: {fileID: 1917839228}
 --- !u!1 &366294661
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,8 +666,9 @@ GameObject:
   - component: {fileID: 509747440}
   - component: {fileID: 509747439}
   - component: {fileID: 509747438}
+  - component: {fileID: 509747441}
   m_Layer: 5
-  m_Name: StartButton (3)
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +731,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 509747439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 509747441}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &509747439
@@ -753,6 +779,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509747436}
   m_CullTransparentMesh: 0
+--- !u!114 &509747441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509747436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee811824d8b85214cabcb8e2ef3ad48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594216716
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1014,7 @@ GameObject:
   - component: {fileID: 1056825631}
   - component: {fileID: 1056825630}
   m_Layer: 5
-  m_Name: StartButton (2)
+  m_Name: AudioButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1111,8 +1148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480.00006, y: -469.97897}
-  m_SizeDelta: {x: 610.0001, y: 56.963413}
+  m_AnchoredPosition: {x: 479.99994, y: -471.79034}
+  m_SizeDelta: {x: 609.9999, y: 51.821907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1097787217
 MonoBehaviour:
@@ -1152,7 +1189,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1097787218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1830362926}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 220423927}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1097787218
@@ -1427,7 +1486,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Audio
 --- !u!222 &1388352255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1617,8 +1676,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480.00006, y: -196.63956}
-  m_SizeDelta: {x: 610.0001, y: 93.27911}
+  m_AnchoredPosition: {x: 479.99994, y: -193.00574}
+  m_SizeDelta: {x: 609.9999, y: 86.01146}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794200868
 MonoBehaviour:
@@ -1766,6 +1825,7 @@ GameObject:
   - component: {fileID: 1917839232}
   - component: {fileID: 1917839231}
   - component: {fileID: 1917839230}
+  - component: {fileID: 1917839233}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -1830,7 +1890,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1917839231}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1917839233}
+        m_MethodName: LoadByIndex
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1917839231
@@ -1867,6 +1938,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1917839228}
   m_CullTransparentMesh: 0
+--- !u!114 &1917839233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1917839228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5624da2879a12ee4d8875d1a396aa32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1978281023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,7 +1961,7 @@ GameObject:
   - component: {fileID: 1978281026}
   - component: {fileID: 1978281025}
   m_Layer: 5
-  m_Name: StartButton (1)
+  m_Name: HelpButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1942,7 +2024,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1978281026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 220423927}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1830362926}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1978281026
@@ -2046,7 +2150,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Help
 --- !u!222 &2046826198
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2121,7 +2225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Quit
 --- !u!222 &2083979740
 CanvasRenderer:
   m_ObjectHideFlags: 0
